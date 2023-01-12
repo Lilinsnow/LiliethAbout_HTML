@@ -1,0 +1,15 @@
+/* CSS will use type selectors, declerations and curly brackets */
+
+
+/* To make all the images have a maximum width that is 100% of the container */
+img {
+    max-width: 100%;
+}
+
+/* To make a line at the top of anything */
+/* Make a line on top of the footer  */
+footer {
+    border-top: 2px solid #000; /* my selector is footer, use composite property called border-top and property value is thickness, style and color */
+}
+
+
