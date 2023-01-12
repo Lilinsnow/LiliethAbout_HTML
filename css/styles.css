@@ -1,15 +1,367 @@
-/* CSS will use type selectors, declerations and curly brackets */
-
-
-/* To make all the images have a maximum width that is 100% of the container */
-img {
+:root {
+    --primary-color: #f0d9cb;
+    --primary-light: #f1dfd3;
+    --secondary-strong: #d58ebf;
+    --secondary-soft: #e2a8be;
+    --tertiary-color: #f9d326;
+    --almost-black: #1e1e1e;
+    --body-max-width: 1200px;
+  }
+  
+  body {
+    margin: auto;
+    padding: 0 auto 40px auto;
+    font-family: "Merriweather", sans-serif;
+    color: var(--almost-black);
+    background-color: var(--primary-light);
+    font-weight: 400;
+    line-height: 1.5;
+  }
+  
+  main {
+    max-width: var(--body-max-width);
+    margin: auto;
+  }
+  
+  blockquote {
+    color: #666;
+    font-style: italic;
+  }
+  img {
     max-width: 100%;
-}
-
-/* To make a line at the top of anything */
-/* Make a line on top of the footer  */
-footer {
+  }
+  
+  header img {
+    width: 100%;
+    max-width: 1720px;
+    height: auto;
+  }
+  
+  nav {
+    display: flex;
+    max-width: 640px;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+  }
+  /* To make a line at the top of anything */
+  /* Make a line on top of the footer  */
+  footer {
     border-top: 2px solid #000; /* my selector is footer, use composite property called border-top and property value is thickness, style and color */
-}
-
-
+    margin-top: 50px;
+  }
+  
+  section {
+    padding: 0 20px;
+  }
+  /* media query for smaller than 640px */
+  @media (max-width: 1200px) {
+    img.responsive {
+      width: 100%;
+      height: auto;
+    }
+  }
+  @media (max-width: 950px) {
+    .mobile-only {
+      display: block;
+    }
+  
+    .desktop-only {
+      display: none;
+    }
+  
+    img.displayed {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  
+  @media (min-width: 950px) {
+    div.responsive {
+      display: flex;
+      flex-direction: row;
+      justify-content: justify;
+      align-items: stretch;
+      align-content: stretch;
+    }
+  
+    div.responsive.reverse {
+      flex-direction: row-reverse;
+    }
+  
+    div.responsive section {
+      flex-grow: 1;
+    }
+    div.responsive img {
+      max-height: 600px;
+      max-width: 66%;
+      width: auto;
+    }
+  
+    .mobile-only {
+      display: none;
+    }
+  
+    .desktop-only {
+      display: block;
+    }
+  }
+  
+  footer p.copy-notice {
+    margin-top: 15px;
+    text-align: center;
+    color: #555;
+    font-size: 0.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  main > h1,
+  main > h2,
+  main > h3,
+  main > h4,
+  main > h5,
+  main > h6 {
+    padding-left: 20px;
+  }
+  .center {
+    text-align: center;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    display: inline-block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: 0;
+    font-size: 17px;
+  }
+  
+  .header {
+    text-align: center;
+    background: #d58ebf;
+    color: rgb(0, 0, 0);
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  a,
+  a:link,
+  a:visited {
+    color: var(--secondary-strong);
+  }
+  
+  a:active,
+  a:hover,
+  a:focus {
+    color: var(--secondary-soft);
+  }
+  
+  P.blocktext {
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em;
+  }
+  
+  IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+    margin-bottom: 0.5em;
+    font-family: "Sacramento", serif;
+  }
+  
+  h1,
+  .h1 {
+    font-size: 96px;
+  }
+  
+  h2,
+  .h2 {
+    font-size: 60px;
+  }
+  
+  h3,
+  .h3 {
+    font-size: 48px;
+  }
+  
+  h4,
+  .h4 {
+    font-size: 24px;
+  }
+  
+  h5,
+  .h5 {
+    font-size: 18px;
+  }
+  
+  h6,
+  .h6 {
+    font-size: 16px;
+  }
+  
+  button,
+  .btn {
+    display: inline-block;
+    padding: 0 16px;
+    background-color: var(--secondary-soft);
+    text-decoration: none;
+    color: white;
+    border: 1px solid var(--secondary-strong);
+    line-height: 2;
+    text-transform: uppercase;
+    font-family: "Source Sans Pro", sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 2px;
+    cursor: pointer;
+  }
+  
+  button:hover,
+  .btn:hover {
+    background-color: var(--secondary-strong);
+  }
+  
+  .btn--secondary {
+    background-color: var(--primary-light);
+    color: #1e1e1e;
+  }
+  
+  .btn--secondary:hover {
+    background-color: var(--primary-color);
+  }
+  
+  code {
+    background-color: #e1e1e1;
+    font-weight: 400;
+    padding: 0 8px;
+    font-size: 0.8em;
+    font-family: "Courier New", monospace;
+  }
+  
+  /* ---> UTILITIES */
+  
+  /* Colors */
+  .color-primary {
+    color: var(--primary-color);
+  }
+  
+  .bg-color-primary {
+    background-color: var(--primary-color);
+  }
+  
+  .color-primary-light {
+    color: var(--primary-light);
+  }
+  
+  .bg-color-primary-light {
+    background-color: var(--primary-light);
+  }
+  
+  .color-secondary {
+    color: var(--secondary-soft);
+  }
+  
+  .bg-color-secondary {
+    background-color: var(--secondary-soft);
+  }
+  
+  .color-secondary-strong {
+    color: var(--secondary-strong);
+  }
+  
+  .bg-color-secondary-strong {
+    background-color: var(--secondary-strong);
+  }
+  
+  .color-tertiary {
+    color: var(--tertiary-color);
+  }
+  
+  .bg-color-tertiary {
+    background-color: var(--tertiary-color);
+  }
+  
+  .color-grey {
+    color: #1e1e1e;
+  }
+  
+  .bg-color-grey {
+    background-color: #1e1e1e;
+  }
+  
+  .color-grey-2 {
+    color: #a2a2a2;
+  }
+  
+  .bg-color-grey-2 {
+    background-color: #a2a2a2;
+  }
+  
+  .color-grey-3 {
+    color: #a2a2a2;
+  }
+  
+  .bg-color-grey-3 {
+    background-color: #a2a2a2;
+  }
+  
+  .color-grey-5 {
+    color: #dadada;
+  }
+  
+  .bg-color-grey-5 {
+    background-color: #dadada;
+  }
+  
+  /* Own styles, these are only for styling THIS page */
+  
+  .pattern-content {
+    max-width: 800px;
+    padding: 16px;
+    margin: 16px auto;
+    background-color: white;
+    border-radius: 8px;
+  }
+  
+  .pattern-section {
+    margin-bottom: 64px;
+  }
+  
+  .pattern-color {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    position: relative;
+  }
+  
+  .pattern-color:before {
+    content: attr(data-color);
+    background-color: rgba(0, 0, 0, 0.2);
+    display: block;
+    color: white;
+    text-align: center;
+  }
+  
+  .pattern-title {
+    border-bottom: 1px solid #e1e1e1;
+    opacity: 0.6;
+  }
+  
+  [data-header]:before {
+    content: attr(data-header) ": ";
+  }
+  
